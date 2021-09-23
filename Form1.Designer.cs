@@ -275,6 +275,7 @@
             this.Controls.Add(this.gbGestion);
             this.Name = "Opticien";
             this.Text = "Opticien";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Opticien_FormClosed);
             this.Load += new System.EventHandler(this.Opticien_Load);
             this.gbGestion.ResumeLayout(false);
             this.gbGestion.PerformLayout();

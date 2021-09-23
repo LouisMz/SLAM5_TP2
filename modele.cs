@@ -22,6 +22,7 @@ namespace Opticien
         public bool Connopen { get => connopen; set => connopen = value; }
         public bool Chargement { get => chargement; set => chargement = value; }
         public DataTable DT1 { get => dT1; set => dT1 = value; }
+        public MySqlConnection MyConnection { get => myConnection; set => myConnection = value; }
         #endregion
 
         #region constructeur

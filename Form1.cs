@@ -30,5 +30,10 @@ namespace Opticien
                 MessageBox.Show("Error");
             }
         }
+
+        private void Opticien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            controlleur.VModele.sedeconnecter();
+        }
     }
 }
