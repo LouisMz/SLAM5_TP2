@@ -7,9 +7,9 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace tp1
+namespace Opticien
 {
-    class modele
+    public class modele
     {
         #region propriétés
         private MySqlConnection myConnection;
@@ -30,7 +30,7 @@ namespace tp1
         #region methode
         public void seConnecter()
         {
-            string myConnectionString = "Database=opticien_tl; Data Source=localhost; User Id=root; Password= ; ";
+            string myConnectionString = "Database=bd_opticien; Data Source=localhost; User Id=root; Password= ; ";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative
             {

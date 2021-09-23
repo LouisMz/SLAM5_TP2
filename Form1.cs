@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace Opticien
 {
-    public partial class Form1 : Form
+    public partial class Opticien : Form
     {
-        public Form1()
+        public Opticien()
         {
             InitializeComponent();
+        }
+
+        private void Opticien_Load(object sender, EventArgs e)
+        {
+            controlleur.init();
+            controlleur.VModele.seConnecter();
+            if (controlleur.VModele.Connopen)
+            {
+                MessageBox.Show("Vous êtes bien connecté");
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
         }
     }
 }

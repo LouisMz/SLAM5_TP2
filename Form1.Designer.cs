@@ -1,6 +1,6 @@
 ﻿namespace Opticien
 {
-    partial class Form1
+    partial class Opticien
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -44,9 +44,11 @@
             this.cbMarque = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.gbGestion = new System.Windows.Forms.GroupBox();
+            this.btnReserver = new System.Windows.Forms.Button();
             this.btnSupp = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.gpListe = new System.Windows.Forms.GroupBox();
+            this.btnAnnuler = new System.Windows.Forms.Button();
             this.gbGestion.SuspendLayout();
             this.gpListe.SuspendLayout();
             this.SuspendLayout();
@@ -191,6 +193,7 @@
             // 
             // gbGestion
             // 
+            this.gbGestion.Controls.Add(this.btnReserver);
             this.gbGestion.Controls.Add(this.textBox3);
             this.gbGestion.Controls.Add(this.cbMarque);
             this.gbGestion.Controls.Add(this.textBox2);
@@ -212,6 +215,16 @@
             this.gbGestion.TabIndex = 15;
             this.gbGestion.TabStop = false;
             this.gbGestion.Text = "Gestion des modèles et exemplaires";
+            // 
+            // btnReserver
+            // 
+            this.btnReserver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReserver.Location = new System.Drawing.Point(134, 325);
+            this.btnReserver.Name = "btnReserver";
+            this.btnReserver.Size = new System.Drawing.Size(97, 31);
+            this.btnReserver.TabIndex = 15;
+            this.btnReserver.Text = "Reserver";
+            this.btnReserver.UseVisualStyleBackColor = true;
             // 
             // btnSupp
             // 
@@ -242,15 +255,27 @@
             this.gpListe.TabStop = false;
             this.gpListe.Text = "Liste des modèles et exemplaires";
             // 
-            // Form1
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.Location = new System.Drawing.Point(867, 380);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(75, 31);
+            this.btnAnnuler.TabIndex = 20;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
+            // 
+            // Opticien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 450);
+            this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.gpListe);
             this.Controls.Add(this.gbGestion);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Opticien";
+            this.Text = "Opticien";
+            this.Load += new System.EventHandler(this.Opticien_Load);
             this.gbGestion.ResumeLayout(false);
             this.gbGestion.PerformLayout();
             this.gpListe.ResumeLayout(false);
@@ -279,6 +304,8 @@
         private System.Windows.Forms.Button btnSupp;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox gpListe;
+        private System.Windows.Forms.Button btnReserver;
+        private System.Windows.Forms.Button btnAnnuler;
     }
 }
 
