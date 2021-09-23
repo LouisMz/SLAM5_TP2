@@ -1,0 +1,5 @@
+C:\Users\lmaze\Desktop\Opticien\obj\Debug\Opticien.csprojAssemblyReference.cache
+C:\Users\lmaze\Desktop\Opticien\obj\Debug\Opticien.exe.config
+C:\Users\lmaze\Desktop\Opticien\obj\Debug\Opticien.Properties.Resources.resources
+C:\Users\lmaze\Desktop\Opticien\obj\Debug\Opticien.csproj.GenerateResource.cache
+C:\Users\lmaze\Desktop\Opticien\obj\Debug\Opticien.csproj.CoreCompileInputs.cache
