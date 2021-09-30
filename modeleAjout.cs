@@ -5,10 +5,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Opticien
 {
-    class modeleAjout
+    public class modeleAjout
     {
        
 
@@ -32,7 +33,7 @@ namespace Opticien
 
         public void charger_donnees(string table)
         {
-            if (table == "bien") charger("select * from bien;", dT);
+            if (table == "bien") charger("select * from bien;", controlleur.VModele.DT1);
         }
     }
 }
