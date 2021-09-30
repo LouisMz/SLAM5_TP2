@@ -21,6 +21,8 @@ namespace Opticien
         {
             controlleur.init();
             controlleur.VModele.seConnecter();
+            controlleur.VModele.chargerMarque();
+            marque();
             if (controlleur.VModele.Connopen)
             {
                 MessageBox.Show("Vous êtes bien connecté");
@@ -35,5 +37,18 @@ namespace Opticien
         {
             controlleur.VModele.sedeconnecter();
         }
+
+        public void marque()
+        {
+            for (int i = 0; i < controlleur.VModele.DT1[0].Rows.Count; i++)
+            {
+                cbMarque.Items.Add(controlleur.VModele.DT1[0].Rows[i]["NOMMARQUE"]);
+            }
+        }
+        public void categori()
+        {
+
+        }
+
     }
 }

@@ -15,17 +15,25 @@ namespace Opticien
         private MySqlConnection myConnection;
         private bool connopen = false;
         private bool chargement = false;
-        private DataTable dT1 = new DataTable();
+        private List<DataTable> dT1 = new List<DataTable>();
         #endregion
+        public modele()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                dT1.Add(new DataTable());
+            }
+        }
 
         #region accesseur
         public bool Connopen { get => connopen; set => connopen = value; }
         public bool Chargement { get => chargement; set => chargement = value; }
-        public DataTable DT1 { get => dT1; set => dT1 = value; }
+        public List<DataTable> DT1 { get => dT1; set => dT1 = value; }
         public MySqlConnection MyConnection { get => myConnection; set => myConnection = value; }
         #endregion
 
         #region constructeur
+
         #endregion
 
         #region methode
@@ -81,7 +89,18 @@ namespace Opticien
                 chargement = false;
             }
         }
-        #endregion
+
+        public void chargerMarque()
+        {
+            charger("SELECT NOMMARQUE FROM MARQUE", controlleur.VModele.DT1[0]);
+        }
+
+        public void chargerCategorie()
+        {
+            charger("SELECT NOMLIBELLE FROM CATEGORIE", controlleur.VModele.DT1[1]);
+        }
     }
+    #endregion
 }
+
 
