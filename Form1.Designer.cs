@@ -45,12 +45,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.gbGestion = new System.Windows.Forms.GroupBox();
             this.btnReserver = new System.Windows.Forms.Button();
-            this.btnSupp = new System.Windows.Forms.Button();
-            this.lbModele = new System.Windows.Forms.ListBox();
             this.gpListe = new System.Windows.Forms.GroupBox();
-            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.gbGestion.SuspendLayout();
             this.gpListe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblModele
@@ -227,51 +229,59 @@
             this.btnReserver.Text = "Reserver";
             this.btnReserver.UseVisualStyleBackColor = true;
             // 
-            // btnSupp
-            // 
-            this.btnSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupp.Location = new System.Drawing.Point(38, 185);
-            this.btnSupp.Name = "btnSupp";
-            this.btnSupp.Size = new System.Drawing.Size(108, 35);
-            this.btnSupp.TabIndex = 16;
-            this.btnSupp.Text = "Supprimer";
-            this.btnSupp.UseVisualStyleBackColor = true;
-            // 
-            // lbModele
-            // 
-            this.lbModele.FormattingEnabled = true;
-            this.lbModele.Location = new System.Drawing.Point(38, 36);
-            this.lbModele.Name = "lbModele";
-            this.lbModele.Size = new System.Drawing.Size(415, 134);
-            this.lbModele.TabIndex = 17;
-            // 
             // gpListe
             // 
-            this.gpListe.Controls.Add(this.lbModele);
-            this.gpListe.Controls.Add(this.btnSupp);
+            this.gpListe.Controls.Add(this.button2);
+            this.gpListe.Controls.Add(this.textBox1);
+            this.gpListe.Controls.Add(this.label1);
+            this.gpListe.Controls.Add(this.dataGridView1);
             this.gpListe.Location = new System.Drawing.Point(489, 21);
             this.gpListe.Name = "gpListe";
-            this.gpListe.Size = new System.Drawing.Size(493, 257);
+            this.gpListe.Size = new System.Drawing.Size(493, 504);
             this.gpListe.TabIndex = 18;
             this.gpListe.TabStop = false;
             this.gpListe.Text = "Liste des modèles et exemplaires";
             // 
-            // btnAnnuler
+            // dataGridView1
             // 
-            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnuler.Location = new System.Drawing.Point(867, 380);
-            this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(75, 31);
-            this.btnAnnuler.TabIndex = 20;
-            this.btnAnnuler.Text = "Annuler";
-            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 38);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(421, 352);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 429);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Nombre d\'exemplaires";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(269, 431);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(51, 20);
+            this.textBox1.TabIndex = 19;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(353, 425);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 35);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Ajouter";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Opticien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 450);
-            this.Controls.Add(this.btnAnnuler);
+            this.ClientSize = new System.Drawing.Size(997, 627);
             this.Controls.Add(this.gpListe);
             this.Controls.Add(this.gbGestion);
             this.Name = "Opticien";
@@ -281,6 +291,8 @@
             this.gbGestion.ResumeLayout(false);
             this.gbGestion.PerformLayout();
             this.gpListe.ResumeLayout(false);
+            this.gpListe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,11 +315,12 @@
         private System.Windows.Forms.ComboBox cbMarque;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox gbGestion;
-        private System.Windows.Forms.Button btnSupp;
-        private System.Windows.Forms.ListBox lbModele;
         private System.Windows.Forms.GroupBox gpListe;
         private System.Windows.Forms.Button btnReserver;
-        private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

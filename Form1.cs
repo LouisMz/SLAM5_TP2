@@ -12,6 +12,7 @@ namespace Opticien
 {
     public partial class Opticien : Form
     {
+        private BindingSource bS1;
         public Opticien()
         {
             InitializeComponent();
@@ -35,9 +36,20 @@ namespace Opticien
 
         public void modele()
         {
-            for (int i = 0; i < controlleur.VModele.DT1[2].Rows.Count; i++)
+            // chargement des données de la table FORMATION via DT[1] et affichage dans un dataGridView
+            controlleur.VModele.chargerModele();
+            if (controlleur.VModele.Chargement)
             {
-                lbModele.Items.Add(controlleur.VModele.DT1[2].Rows[i]["CODEMODELE"]);
+                bS1 = new BindingSource();
+
+                bS1.DataSource = controlleur.VModele.DT1[2];
+                dataGridView1.DataSource = bS1;
+                dataGridView1.Columns[0].HeaderText = "CODEMODELE";
+                dataGridView1.Columns[1].HeaderText = "IDMARQUE";
+
+                // mise à jour du dataGridView via le bindingSource rempli par le DataTable
+                dataGridView1.Refresh();
+                dataGridView1.Visible = true;
             }
         }
 
@@ -50,7 +62,7 @@ namespace Opticien
             controlleur.VModele.chargerModele();
             categorie();
             marque();
-            categorie();
+            modele();
             if (controlleur.VModele.Connopen)
             {
                 MessageBox.Show("Vous êtes bien connecté");
