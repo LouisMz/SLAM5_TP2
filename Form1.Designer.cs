@@ -39,14 +39,14 @@
             this.cbCategorie = new System.Windows.Forms.ComboBox();
             this.tbModele = new System.Windows.Forms.TextBox();
             this.tbCouleur = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbTaille = new System.Windows.Forms.TextBox();
+            this.tbPrix = new System.Windows.Forms.TextBox();
             this.cbMarque = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.gbGestion = new System.Windows.Forms.GroupBox();
             this.btnReserver = new System.Windows.Forms.Button();
             this.btnSupp = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbModele = new System.Windows.Forms.ListBox();
             this.gpListe = new System.Windows.Forms.GroupBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.gbGestion.SuspendLayout();
@@ -132,6 +132,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Ajouter";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // cbCategorie
             // 
@@ -158,21 +159,21 @@
             this.tbCouleur.Size = new System.Drawing.Size(245, 26);
             this.tbCouleur.TabIndex = 10;
             // 
-            // textBox1
+            // tbTaille
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(119, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 26);
-            this.textBox1.TabIndex = 11;
+            this.tbTaille.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTaille.Location = new System.Drawing.Point(119, 151);
+            this.tbTaille.Name = "tbTaille";
+            this.tbTaille.Size = new System.Drawing.Size(245, 26);
+            this.tbTaille.TabIndex = 11;
             // 
-            // textBox2
+            // tbPrix
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(119, 190);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 26);
-            this.textBox2.TabIndex = 12;
+            this.tbPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPrix.Location = new System.Drawing.Point(119, 190);
+            this.tbPrix.Name = "tbPrix";
+            this.tbPrix.Size = new System.Drawing.Size(245, 26);
+            this.tbPrix.TabIndex = 12;
             // 
             // cbMarque
             // 
@@ -196,8 +197,8 @@
             this.gbGestion.Controls.Add(this.btnReserver);
             this.gbGestion.Controls.Add(this.textBox3);
             this.gbGestion.Controls.Add(this.cbMarque);
-            this.gbGestion.Controls.Add(this.textBox2);
-            this.gbGestion.Controls.Add(this.textBox1);
+            this.gbGestion.Controls.Add(this.tbPrix);
+            this.gbGestion.Controls.Add(this.tbTaille);
             this.gbGestion.Controls.Add(this.tbCouleur);
             this.gbGestion.Controls.Add(this.tbModele);
             this.gbGestion.Controls.Add(this.cbCategorie);
@@ -236,17 +237,17 @@
             this.btnSupp.Text = "Supprimer";
             this.btnSupp.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lbModele
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(38, 36);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(415, 134);
-            this.listBox1.TabIndex = 17;
+            this.lbModele.FormattingEnabled = true;
+            this.lbModele.Location = new System.Drawing.Point(38, 36);
+            this.lbModele.Name = "lbModele";
+            this.lbModele.Size = new System.Drawing.Size(415, 134);
+            this.lbModele.TabIndex = 17;
             // 
             // gpListe
             // 
-            this.gpListe.Controls.Add(this.listBox1);
+            this.gpListe.Controls.Add(this.lbModele);
             this.gpListe.Controls.Add(this.btnSupp);
             this.gpListe.Location = new System.Drawing.Point(489, 21);
             this.gpListe.Name = "gpListe";
@@ -297,13 +298,13 @@
         private System.Windows.Forms.ComboBox cbCategorie;
         private System.Windows.Forms.TextBox tbModele;
         private System.Windows.Forms.TextBox tbCouleur;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbTaille;
+        private System.Windows.Forms.TextBox tbPrix;
         private System.Windows.Forms.ComboBox cbMarque;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox gbGestion;
         private System.Windows.Forms.Button btnSupp;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbModele;
         private System.Windows.Forms.GroupBox gpListe;
         private System.Windows.Forms.Button btnReserver;
         private System.Windows.Forms.Button btnAnnuler;

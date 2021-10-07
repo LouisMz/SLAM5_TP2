@@ -99,6 +99,38 @@ namespace Opticien
         {
             charger("SELECT NOMLIBELLE FROM CATEGORIE", controlleur.VModele.DT1[1]);
         }
+
+        public void chargerModele()
+        {
+            charger("SELECT * FROM modele", controlleur.VModele.DT1[2]);
+        }
+
+        public bool AjoutModele(string tbModele, int cbCategorie, int cbMarque, int tbTaille, decimal tbPrix, string tbCouleur )
+        {
+            try
+            {
+                bool ok = false;
+                // préparation de la requête avec des paramètres
+                string requete = "insert into modele values (@CODEMODELE, @IDMARQUE, @IDCATEGORIE, @TAILLE, @PRIX, @DESCRIPTIONCOULEUR)";
+                MySqlCommand command = myConnection.CreateCommand();
+                command.CommandText = requete;
+                // mise à jour des paramètres de la requête préparée avec les infos passées en paramètre de
+                command.Parameters.AddWithValue("CODEMODELE", tbModele);
+                command.Parameters.AddWithValue("IDCATEGORIE", cbCategorie);
+                command.Parameters.AddWithValue("IDMARQUE", cbMarque);
+                command.Parameters.AddWithValue("TAILLE", tbTaille);
+                command.Parameters.AddWithValue("PRIX", tbPrix);
+                command.Parameters.AddWithValue("DESCRIPTIONCOULEUR", tbCouleur);
+                // Exécution de la requête
+                int i = command.ExecuteNonQuery();
+                // i est positif si l'insertion a pu avoir lieu
+                return (i > 0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
     #endregion
 }
